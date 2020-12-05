@@ -49,4 +49,9 @@ public class InputReader {
         }
         return dataList;
     }
+
+
+    public String[] splitter(String data,String key){
+        return data.split(key);
+    }
 }
