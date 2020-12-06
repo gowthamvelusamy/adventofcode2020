@@ -5,7 +5,7 @@ import org.adventofcode2020.utils.InputReader;
 import java.util.Collections;
 import java.util.List;
 
-public class ProductOfNumbersAddToASum {
+public class ReportRepair {
 
 
     private Integer findProductOfTwoNumbersAddToSum(List<Integer> numbers, Integer sum) {
@@ -48,9 +48,9 @@ public class ProductOfNumbersAddToASum {
     public static void main(String[] args) {
         final List<Integer> numbers = new InputReader().readNumbers("dec-01-input.txt");
         Collections.sort(numbers);
-        ProductOfNumbersAddToASum productOfNumbersAddToASum = new ProductOfNumbersAddToASum();
-        System.out.println(productOfNumbersAddToASum.findProductOfTwoNumbersAddToSum(numbers, 2020));
-        System.out.println(productOfNumbersAddToASum.findProductOfThreeNumbersAddToSum(numbers, 2020));
+        ReportRepair reportRepair = new ReportRepair();
+        System.out.println(reportRepair.findProductOfTwoNumbersAddToSum(numbers, 2020));
+        System.out.println(reportRepair.findProductOfThreeNumbersAddToSum(numbers, 2020));
 
     }
 }
