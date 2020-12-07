@@ -1,6 +1,6 @@
-package org.adventofcode2020.dec01;
+package com.gv.adventofcode2020.dec01;
 
-import org.adventofcode2020.utils.InputReader;
+import com.gv.adventofcode2020.utils.InputReader;
 
 import java.util.Collections;
 import java.util.List;

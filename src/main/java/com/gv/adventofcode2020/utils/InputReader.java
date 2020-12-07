@@ -1,4 +1,4 @@
-package org.adventofcode2020.utils;
+package com.gv.adventofcode2020.utils;
 
 import java.io.IOException;
 import java.net.URL;

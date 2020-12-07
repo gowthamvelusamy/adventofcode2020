@@ -1,6 +1,6 @@
-package org.adventofcode2020.dec03;
+package com.gv.adventofcode2020.dec03;
 
-import org.adventofcode2020.utils.InputReader;
+import com.gv.adventofcode2020.utils.InputReader;
 
 import java.math.BigInteger;
 import java.util.ArrayList;
