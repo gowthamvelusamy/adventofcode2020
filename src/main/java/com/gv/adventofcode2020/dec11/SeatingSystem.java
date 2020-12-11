@@ -20,10 +20,14 @@ public class SeatingSystem {
             }
             seatRow++;
         }
+
         //PART 1
         seatingSystem.fillSeatsBasedOnNeighbour(seatMatrix, 4, false);
+        long start = System.currentTimeMillis();
         // PART 2
         seatingSystem.fillSeatsBasedOnNeighbour(seatMatrix, 5, true);
+        long stop = System.currentTimeMillis();
+        System.out.println(stop-start);
     }
 
     private void fillSeatsBasedOnNeighbour(char[][] seatMatrix,
@@ -93,16 +97,20 @@ public class SeatingSystem {
             if (isNeighbourFound(i + 1, j, 1, 0, seatMatrix, '#', isVisiblityMatters)) {
                 neighboursFilled++;
             }
-            if (isNeighbourFound(i - 1, j - 1, -1, -1, seatMatrix, '#', isVisiblityMatters)) {
+            if ((neighboursFilled < crowdedSeatsThreshold)
+                    && (isNeighbourFound(i - 1, j - 1, -1, -1, seatMatrix, '#', isVisiblityMatters))) {
                 neighboursFilled++;
             }
-            if (isNeighbourFound(i - 1, j + 1, -1, 1, seatMatrix, '#', isVisiblityMatters)) {
+            if ((neighboursFilled < crowdedSeatsThreshold)
+                    && (isNeighbourFound(i - 1, j + 1, -1, 1, seatMatrix, '#', isVisiblityMatters))) {
                 neighboursFilled++;
             }
-            if (isNeighbourFound(i + 1, j - 1, 1, -1, seatMatrix, '#', isVisiblityMatters)) {
+            if ((neighboursFilled < crowdedSeatsThreshold)
+                    && (isNeighbourFound(i + 1, j - 1, 1, -1, seatMatrix, '#', isVisiblityMatters))) {
                 neighboursFilled++;
             }
-            if (isNeighbourFound(i + 1, j + 1, 1, 1, seatMatrix, '#', isVisiblityMatters)) {
+            if ((neighboursFilled < crowdedSeatsThreshold)
+                    && (isNeighbourFound(i + 1, j + 1, 1, 1, seatMatrix, '#', isVisiblityMatters))) {
                 neighboursFilled++;
             }
             if (neighboursFilled >= crowdedSeatsThreshold) {
